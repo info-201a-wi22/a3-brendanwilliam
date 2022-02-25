@@ -1,0 +1,45 @@
+---
+title: "Understanding Mass Incarceration, Race, and Geography"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+setwd("../source")
+source("analysis.R")
+```
+
+#### *Brendan Keane*
+#### *February 24th, 2022*
+#### *INFO 201 - Assignment 3*
+
+
+## Introduction and Summary Information
+While mass incarceration is a well known issue, it is hard to understand how this issue has changed over time. Through the help of the [_Incarceration Trends_](https://github.com/vera-institute/incarceration-trends#documentation) data tool created by the *Vera Institute of Justice*, we can develop a better understanding of how mass incarceration interacts with racial, geographic, and economic factors. As of 2018, there are there are `r total_jail_2018` people in jail across `r num_states - 1` states and `r num_counties` counties. Since 1985, the number of jailed citizens has increased `r percent_change_jail`% while the US population has only increased `r percent_change_pop`%. Even more concerning, prison populations are growing at a `r prison_growth_rate`x faster rate than the general population. As many prisoners are being released early because of COVID-19, it is important to ask what is the role of prison? Who belongs in prison? And are prisons designed for rehabilitation or punishment?
+
+## Trends over time
+```{r jail_over_time_race, echo = FALSE}
+jail_over_time_race
+```
+
+### Key findings
+Since 1985 (when this data set begins to track race), all races experience a rapid increase in incarceration. Around 2008, both Latinx and Black jailed populations decrease. This could be related to the recession, the election of Obama, or a combination of the two. Also, while white people do make up the majority of the jailed population, they are jailed at a much lower rate than people of color.
+
+## Variable comparison
+```{r jail_by_raceandregion, echo = FALSE}
+jail_by_raceandregion
+```
+
+### Key findings
+In the previous chart, both AAPI and Native American populations were hard to see. In this chart, it is easier to see where these groups of people are jailed For example, Native Americans make up 6.6% of jailed people in the Mountain region, and 5.5% of jailed people in the West North Central region. These numbers, along with Black South Atlantic and Latinx Pacific statistics, are reminiscent of where people of color experienced oppression in American History.
+
+
+## Map
+```{r jail_by_geography, echo = FALSE}
+jail_by_geography
+```
+
+### Key findings
+While the majority of jails are not privatized, this map does indicate a trend in private prison location (South Atlantic and Southwest). Additionally, this map shows where incarcerated people tend to be. It should be noted that while the eastern United States hosts a greater population, the ubiquitous nature of prison populations is staggering compared to the western United States. While most prison populations center around major metropolitan areas, the South Atlantic and Midwest have noticeable prison populations between major cities.
+
+
+
